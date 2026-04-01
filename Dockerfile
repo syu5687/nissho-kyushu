@@ -1,10 +1,27 @@
 FROM php:8.1-apache
-RUN a2enmod rewrite
-RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
-RUN docker-php-ext-install mbstring
-COPY . /var/www/html/
-RUN chmod -R 777 /var/www/html/data
-RUN sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf \
-    && sed -i 's/<VirtualHost \*:80>/<VirtualHost *:8080>/' /etc/apache2/sites-enabled/000-default.conf
+
+ENV PORT=8080
 EXPOSE 8080
-CMD ["apache2-foreground"]
+
+# Cloud Run用Apache設定
+RUN sed -i "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf \
+ && echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# .htaccess対応とmod_rewrite
+RUN a2enmod rewrite \
+ && sed -i "s/AllowOverride None/AllowOverride All/" /etc/apache2/apache2.conf
+
+# /var/www/html にアクセス許可
+RUN printf '%s\n' \
+  '<Directory /var/www/html>' \
+  '    Options Indexes FollowSymLinks' \
+  '    AllowOverride All' \
+  '    Require all granted' \
+  '</Directory>' >> /etc/apache2/apache2.conf
+
+# ファイル配置
+COPY . /var/www/html
+
+# パーミッション
+RUN chown -R www-data:www-data /var/www/html \
+ && chmod -R 755 /var/www/html
