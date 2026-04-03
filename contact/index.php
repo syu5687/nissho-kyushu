@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 </style>
 
 <section class="page-hero" style="min-height:380px">
-  <div class="page-hero-bg" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2000x1333_v-frms_webp_b74bbffa-6560-49ae-a3fa-fc1c803f7f1b.webp')"></div>
+  <div class="page-hero-bg" style="background-image:url('/images/company-mission.webp')"></div>
   <div class="page-hero-inner">
     <h1 class="page-hero-en">CONTACT</h1>
     <p class="page-hero-ja">お問い合わせ</p>

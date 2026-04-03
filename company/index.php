@@ -59,7 +59,7 @@ require_once __DIR__.'/../_inc/header.php';
 </style>
 
 <section class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2400x1600_v-frms_webp_f8955ed2-f57e-4ffc-bc1a-c49b07cb2084.webp')"></div>
+  <div class="page-hero-bg" style="background-image:url('/images/company-hero.webp')"></div>
   <div class="page-hero-inner">
     <h1 class="page-hero-en">COMPANY</h1>
     <p class="page-hero-ja">会社概要</p>
@@ -67,7 +67,7 @@ require_once __DIR__.'/../_inc/header.php';
 </section>
 
 <section class="mission-split">
-  <div class="mission-img" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2000x1333_v-frms_webp_b74bbffa-6560-49ae-a3fa-fc1c803f7f1b.webp')"></div>
+  <div class="mission-img" style="background-image:url('/images/company-mission.webp')"></div>
   <div class="mission-text">
     <p class="mission-label">OUR MISSION</p>
     <h2 class="mission-title">人と車のさまざまなシーンに、<br>日承の技術が光ります。</h2>

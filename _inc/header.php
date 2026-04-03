@@ -153,7 +153,7 @@ footer{background:var(--black);padding:96px 0 0}
 
 <header id="site-header">
   <a href="/" class="header-logo">
-    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-1465x258_1007db99-2b96-4d1b-8472-5f6623972276.svg" alt="NISSHO INDUSTRY CO.,LTD.">
+    <img src="/images/logo.svg" alt="NISSHO INDUSTRY CO.,LTD.">
   </a>
   <ul class="header-nav" id="headerNav">
     <li><a href="/"<?= isActive('/') ?>>HOME</a></li>

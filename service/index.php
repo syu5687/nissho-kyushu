@@ -51,7 +51,7 @@ require_once __DIR__.'/../_inc/header.php';
 </style>
 
 <section class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2000x1333_v-frms_webp_7426cce6-4028-47b0-b6e7-1c1076c22510.webp')"></div>
+  <div class="page-hero-bg" style="background-image:url('/images/service-facility.webp')"></div>
   <div class="page-hero-inner">
     <h1 class="page-hero-en">SERVICE</h1>
     <p class="page-hero-ja">わたしたちのサービス</p>
@@ -68,7 +68,7 @@ require_once __DIR__.'/../_inc/header.php';
   <h2 class="product-title">製品加工技術の一部紹介</h2>
 
   <div class="product-item">
-    <div class="product-img" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2400x1601_v-frms_webp_71d7df83-1c9c-4bb5-b669-4961a63a828b_regular.webp')"></div>
+    <div class="product-img" style="background-image:url('/images/service-processing.webp')"></div>
     <div class="product-info">
       <p class="product-num">01</p>
       <h3 class="product-name">射出成形 /<br>プラスチック成形</h3>
@@ -77,7 +77,7 @@ require_once __DIR__.'/../_inc/header.php';
   </div>
 
   <div class="product-item reverse">
-    <div class="product-img" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2000x1333_v-frms_webp_7426cce6-4028-47b0-b6e7-1c1076c22510.webp')"></div>
+    <div class="product-img" style="background-image:url('/images/service-facility.webp')"></div>
     <div class="product-info">
       <p class="product-num">02</p>
       <h3 class="product-name">自動ロボット</h3>

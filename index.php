@@ -20,7 +20,7 @@ $recentNews = array_slice($news, 0, 2);
 .hero-fixed-bg{
   position:fixed;
   top:0;left:0;width:100%;height:100vh;
-  background:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2400x1396_v-frms_webp_5034dde9-9369-43b0-984f-cb3e4fe2d4d1.webp')
+  background:url('/images/hero-bg.webp')
     center/cover no-repeat;
   z-index:-1;
 }
@@ -261,8 +261,8 @@ $recentNews = array_slice($news, 0, 2);
 <!-- WHAT WE DO -->
 <section class="wwd">
   <div class="wwd-images">
-    <div class="wwd-img" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2400x1346_v-frms_webp_ad3de673-d261-4f4f-b84e-163729fe412f_regular.webp')"></div>
-    <div class="wwd-img" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2400x1600_v-frms_webp_bba089a2-99c4-4d56-82b5-e1f7d4d19d5a_regular.webp')"></div>
+    <div class="wwd-img" style="background-image:url('/images/wwd-1.webp')"></div>
+    <div class="wwd-img" style="background-image:url('/images/careers-bg.webp')"></div>
   </div>
   <div class="wwd-body">
     <h2 class="wwd-heading">WHAT WE DO</h2>
@@ -275,7 +275,7 @@ $recentNews = array_slice($news, 0, 2);
   <p class="svc-home-label">SERVICE</p>
 
   <div class="svc-home-item">
-    <div class="svc-img" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2400x1601_v-frms_webp_71d7df83-1c9c-4bb5-b669-4961a63a828b_regular.webp')"></div>
+    <div class="svc-img" style="background-image:url('/images/service-processing.webp')"></div>
     <div class="svc-info">
       <p class="svc-title">PROCESSING</p>
       <p class="svc-subtitle">製品・加工技術</p>
@@ -285,7 +285,7 @@ $recentNews = array_slice($news, 0, 2);
   </div>
 
   <div class="svc-home-item reverse">
-    <div class="svc-img" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2000x1333_v-frms_webp_7426cce6-4028-47b0-b6e7-1c1076c22510.webp')"></div>
+    <div class="svc-img" style="background-image:url('/images/service-facility.webp')"></div>
     <div class="svc-info">
       <p class="svc-title">FACILITY</p>
       <p class="svc-subtitle">当社の設備</p>
@@ -322,7 +322,7 @@ $recentNews = array_slice($news, 0, 2);
 
 <!-- CAREERS -->
 <section class="careers">
-  <div class="careers-bg" style="background-image:url('https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-2400x1600_v-frms_webp_bba089a2-99c4-4d56-82b5-e1f7d4d19d5a_regular.webp')"></div>
+  <div class="careers-bg" style="background-image:url('/images/careers-bg.webp')"></div>
   <div class="careers-inner">
     <p class="careers-label">CAREERS</p>
     <h2 class="careers-title">わたしたちは個のちからを最大限に活かしたチーム戦を実践しています。</h2>

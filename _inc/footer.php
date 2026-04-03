@@ -19,7 +19,7 @@
 
   <!-- FOOTER NAV -->
   <div class="footer-nav-wrap">
-    <a href="/"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/V5a7YYeBOR/s-1465x258_1007db99-2b96-4d1b-8472-5f6623972276.svg" alt="NISSHO INDUSTRY CO.,LTD." style="height:32px;opacity:.7"></a>
+    <a href="/"><img src="/images/logo.svg" alt="NISSHO INDUSTRY CO.,LTD." style="height:32px;opacity:.7"></a>
     <ul class="footer-nav">
       <li><a href="/">HOME</a></li>
       <li><a href="/company">COMPANY</a></li>

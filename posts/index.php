@@ -46,7 +46,7 @@ require_once __DIR__.'/../_inc/header.php';
 </style>
 
 <section class="page-hero" style="min-height:360px">
-  <div class="page-hero-bg" style="background-image:url('<?= htmlspecialchars($item['image'] ?: 'https://storage.googleapis.com/studio-cms-assets/projects/V5a7YYeBOR/s-2000x1333_v-frms_webp_05c06e4d-a1bf-465c-b370-3fe2e1d0748c_middle.webp') ?>')"></div>
+  <div class="page-hero-bg" style="background-image:url('<?= htmlspecialchars($item['image'] ?: '/images/news-1.webp') ?>')"></div>
   <div class="page-hero-inner">
     <h1 class="page-hero-en">NEWS</h1>
     <p class="page-hero-ja">お知らせ</p>
