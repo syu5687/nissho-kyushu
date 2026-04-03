@@ -1,6 +1,7 @@
 <?php
 $pageTitle = '日承工業株式会社　九州佐賀事業所 | お問い合わせ';
-require_once __DIR__.'/../_inc/header.php';
+require_once __DIR__."/../_inc/header.php";
+?><!-- subpage --><script>document.body.classList.add("subpage");</script><?php
 $sent=false; $errors=[];
 if($_SERVER['REQUEST_METHOD']==='POST'){
   $name=trim($_POST['name']??''); $email=trim($_POST['email']??'');
@@ -53,8 +54,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 <section class="page-hero" style="min-height:380px">
   <div class="page-hero-bg" style="background-image:url('/images/company-mission.webp')"></div>
   <div class="page-hero-inner">
-    <h1 class="page-hero-en">CONTACT</h1>
-    <p class="page-hero-ja">お問い合わせ</p>
+    <h1 class="page-hero-en anim-down">CONTACT</h1>
+    <p class="page-hero-ja anim-fade d2">お問い合わせ</p>
   </div>
 </section>
 
@@ -66,11 +67,11 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     <br><a href="/" style="color:var(--blue)">トップページへ戻る</a>
   </div>
   <?php else: ?>
-  <p class="contact-lead">弊社へのお問い合わせはこちらのフォームより承っております。ご返信に3営業日ほどお時間をいただいております。3営業日を過ぎても返信がない場合は、お手数ですが再度お問い合わせをお願いいたします。<br><br>※求人のお問い合わせも下記フォームよりお願いいたします<br>※営業メールは禁止いたします。</p>
+  <p class="contact-lead anim">弊社へのお問い合わせはこちらのフォームより承っております。ご返信に3営業日ほどお時間をいただいております。3営業日を過ぎても返信がない場合は、お手数ですが再度お問い合わせをお願いいたします。<br><br>※求人のお問い合わせも下記フォームよりお願いいたします<br>※営業メールは禁止いたします。</p>
   <?php if($errors): ?>
   <div class="form-errors"><?php foreach($errors as $e): ?><p>・<?= htmlspecialchars($e) ?></p><?php endforeach; ?></div>
   <?php endif; ?>
-  <form class="contact-form" method="POST">
+  <form class="contact-form anim d2" method="POST">
     <div class="form-group"><label class="form-label">お名前<span>*</span></label><input class="form-input" type="text" name="name" value="<?= htmlspecialchars($_POST['name']??'') ?>" placeholder="山田 太郎" required></div>
     <div class="form-group"><label class="form-label">メールアドレス<span>*</span></label><input class="form-input" type="email" name="email" value="<?= htmlspecialchars($_POST['email']??'') ?>" placeholder="example@email.com" required></div>
     <div class="form-group"><label class="form-label">お問い合わせ内容<span>*</span></label><textarea class="form-textarea" name="message" placeholder="お問い合わせ内容をご記入ください" required><?= htmlspecialchars($_POST['message']??'') ?></textarea></div>

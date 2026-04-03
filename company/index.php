@@ -1,7 +1,8 @@
 <?php
 $pageTitle = '日承工業 九州事業所 会社概要 | COMPANY';
 $pageDesc  = '日承工業株式会社 九州事業所の会社概要、企業理念、スタッフ紹介。';
-require_once __DIR__.'/../_inc/header.php';
+require_once __DIR__."/../_inc/header.php";
+?><!-- subpage --><script>document.body.classList.add("subpage");</script><?php
 ?>
 <style>
 /* MISSION */
@@ -61,17 +62,17 @@ require_once __DIR__.'/../_inc/header.php';
 <section class="page-hero">
   <div class="page-hero-bg" style="background-image:url('/images/company-hero.webp')"></div>
   <div class="page-hero-inner">
-    <h1 class="page-hero-en">COMPANY</h1>
-    <p class="page-hero-ja">会社概要</p>
+    <h1 class="page-hero-en anim-down">COMPANY</h1>
+    <p class="page-hero-ja anim-fade d2">会社概要</p>
   </div>
 </section>
 
 <section class="mission-split">
   <div class="mission-img" style="background-image:url('/images/company-mission.webp')"></div>
   <div class="mission-text">
-    <p class="mission-label">OUR MISSION</p>
-    <h2 class="mission-title">人と車のさまざまなシーンに、<br>日承の技術が光ります。</h2>
-    <p class="mission-body">日承工業グループでは車両、電子部品に関する、金属と樹脂を合わせ1,200点以上の製品を取り扱っています。工場毎でつくられた製品は 厳しい管理のもと各メーカー様に納品され、これらの製品を通じ皆様の安全で快適なカーライフをバックアップしています。</p>
+    <p class="mission-label anim-fade">OUR MISSION</p>
+    <h2 class="mission-title anim d1">人と車のさまざまなシーンに、<br>日承の技術が光ります。</h2>
+    <p class="mission-body anim d2">日承工業グループでは車両、電子部品に関する、金属と樹脂を合わせ1,200点以上の製品を取り扱っています。工場毎でつくられた製品は 厳しい管理のもと各メーカー様に納品され、これらの製品を通じ皆様の安全で快適なカーライフをバックアップしています。</p>
     <div class="policy-box">
       <h3>労働安全衛生・環境・品質方針</h3>
       <ul class="policy-list">
@@ -89,13 +90,13 @@ require_once __DIR__.'/../_inc/header.php';
 
 <section class="values-sec">
   <div class="values-head">
-    <p class="values-sec-label">VALUES</p>
-    <h2 class="values-title">日承工業 6つの行動指針</h2>
+    <p class="values-sec-label anim-fade">VALUES</p>
+    <h2 class="values-title anim d1">日承工業 6つの行動指針</h2>
   </div>
   <div class="values-grid">
     <?php $vals=[['en'=>'SHARING INTENTIONS','ja'=>'意思の共有','body'=>'小さな課題や疑問に対して、常に創造し自分のアイディアを絶やさない。'],['en'=>'CUSTOMER FIRST','ja'=>'顧客第一主義','body'=>'顧客のニーズに応える為に迅速かつ柔軟に対応'],['en'=>'HABIT','ja'=>'習慣','body'=>'5S（整理・整頓・清掃・清潔・躾）の意識を持ち行動に移すこと'],['en'=>'NEW FIELDS','ja'=>'新しい分野への取り組み','body'=>'我々が目指すところは常に先を見ながら一歩前に進んだ取り組みを行っていく'],['en'=>'QUALITY AWARENESS','ja'=>'品質に対する意識','body'=>'我に出来ることは率先して動き対応すること。それが自己成長とお客様への信頼にもつながる'],['en'=>'CRISIS OPPORTUNITY','ja'=>'ピンチは最大のチャンス','body'=>'難しい仕事ほど燃える気持ちを持って取り組むべきだ。「勇気とパワーだ」']];
     foreach($vals as $v): ?>
-    <div class="val-card">
+    <div class="val-card anim d1">
       <p class="val-en"><?= $v['en'] ?></p>
       <p class="val-ja"><?= $v['ja'] ?></p>
       <p class="val-body"><?= $v['body'] ?></p>
@@ -112,7 +113,7 @@ require_once __DIR__.'/../_inc/header.php';
   <div class="staff-grid">
     <?php $staffs=[['name'=>'角皆 裕希','role'=>'常務取締役','comment'=>'私たちは、絶え間ない革新と努力を通じて、社会に新しい価値を提供し続けます。持続可能な未来を築き、信頼されるパートナーとして、お客様と共に歩み、地域や次世代に貢献することを誓います。'],['name'=>'井上','role'=>'成形管理 課長','comment'=>'品質に対する意識を日々確認し習慣として管理業務を行えるようになりました。'],['name'=>'中島','role'=>'成形管理 係長','comment'=>'「安全対策」「責任感」「習慣」の基本を忘れずに会社と一緒に成長していければと思います。'],['name'=>'永井','role'=>'管理課 係長','comment'=>'自分が関わった製品が使用されている車を笑顔で乗っている姿を見ると、とてもやりがいを感じます。'],['name'=>'穴井','role'=>'成形管理','comment'=>'毎日一つ一つの作業をチェックすることで常にミス０を維持できるように緊張感を持って作業しております。'],['name'=>'大坪','role'=>'成形管理','comment'=>'業務効率化と品質向上を同時に伸ばしていけるように日々心がけております。'],['name'=>'野田','role'=>'成形管理','comment'=>'常に品質に対する意識を持ち、検査を行っております。'],['name'=>'中村','role'=>'管理課 課長','comment'=>'20代 30代が活躍できる職場だと思います。'],['name'=>'西浦','role'=>'成形管理','comment'=>'子育てとの両立でどうしても休むこともありますが、快く受け入れてもらって、ありがたい環境で仕事ができております。'],['name'=>'花島','role'=>'物流管理 主任','comment'=>'未経験でも活躍できる職場だと思います。'],['name'=>'塚原','role'=>'成形管理 主任','comment'=>'私たちが造った車の部品が使用されているのを見ると、人々の生活の一部となり支えているなと実感できます。'],['name'=>'野中','role'=>'成形管理','comment'=>'自分で判断がつかない時はすぐに品質管理の方に確認をしてもらうなどしています。']];
     foreach($staffs as $s): ?>
-    <div class="staff-card">
+    <div class="staff-card anim">
       <p class="staff-name"><?= htmlspecialchars($s['name']) ?></p>
       <p class="staff-role"><?= htmlspecialchars($s['role']) ?></p>
       <p class="staff-comment"><?= htmlspecialchars($s['comment']) ?></p>
@@ -122,9 +123,9 @@ require_once __DIR__.'/../_inc/header.php';
 </section>
 
 <section class="about-sec">
-  <p class="about-label">ABOUT</p>
-  <h2 class="about-title">会社概要</h2>
-  <table class="about-table">
+  <p class="about-label anim-fade">ABOUT</p>
+  <h2 class="about-title anim d1">会社概要</h2>
+  <table class="about-table anim d2">
     <tr><th>名称</th><td>日承工業株式会社 (NISSHO INDUSTRY Inc.) 九州事業所</td></tr>
     <tr><th>住所</th><td>〒842-0123　佐賀県神埼市神埼町的123内</td></tr>
     <tr><th>設立</th><td>1951年01月　九州事業所：2010年03月</td></tr>

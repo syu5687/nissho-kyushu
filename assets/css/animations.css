@@ -1,0 +1,62 @@
+/* ========================================
+   NISSHO INDUSTRY - Animation System
+   easing: cubic-bezier(0.4, 0.4, 0, 1)
+======================================== */
+
+/* ページ遷移 */
+body{transition:opacity 600ms cubic-bezier(.4,.4,0,1)}
+
+/* ナビバー */
+#site-header{transition:background 400ms cubic-bezier(.4,.4,0,1),opacity 800ms cubic-bezier(.4,.4,0,1) 1400ms,transform 800ms cubic-bezier(.4,.4,0,1) 1400ms}
+#site-header.scrolled{background:rgba(0,0,0,.88);backdrop-filter:blur(8px)}
+body.subpage #site-header{transition:background 400ms cubic-bezier(.4,.4,0,1);opacity:1!important;transform:none!important}
+
+/* スクロールアニメーション */
+.anim{opacity:0;transform:translateY(48px);will-change:opacity,transform;transition:opacity 800ms cubic-bezier(.4,.4,0,1),transform 800ms cubic-bezier(.4,.4,0,1)}
+.anim.in{opacity:1;transform:translateY(0)}
+.anim-down{opacity:0;transform:translateY(-48px);transition:opacity 800ms cubic-bezier(.4,.4,0,1),transform 800ms cubic-bezier(.4,.4,0,1)}
+.anim-down.in{opacity:1;transform:translateY(0)}
+.anim-left{opacity:0;transform:translateX(-48px);transition:opacity 800ms cubic-bezier(.4,.4,0,1),transform 800ms cubic-bezier(.4,.4,0,1)}
+.anim-left.in{opacity:1;transform:translateX(0)}
+.anim-right{opacity:0;transform:translateX(48px);transition:opacity 800ms cubic-bezier(.4,.4,0,1),transform 800ms cubic-bezier(.4,.4,0,1)}
+.anim-right.in{opacity:1;transform:translateX(0)}
+.anim-fade{opacity:0;transition:opacity 800ms cubic-bezier(.4,.4,0,1)}
+.anim-fade.in{opacity:1}
+.anim-scale{transform:scale(1.06);transition:transform 3000ms cubic-bezier(.4,.4,0,1) 500ms}
+.anim-scale.in{transform:scale(1)}
+
+/* ディレイ */
+.d1{transition-delay:100ms!important}
+.d2{transition-delay:200ms!important}
+.d3{transition-delay:300ms!important}
+.d4{transition-delay:400ms!important}
+.d5{transition-delay:500ms!important}
+.d6{transition-delay:600ms!important}
+
+/* SCROLLインジケーター */
+@keyframes scrollBounce{0%,100%{opacity:.4;transform:translateY(0) rotate(90deg)}50%{opacity:1;transform:translateY(6px) rotate(90deg)}}
+.hero-scroll{animation:scrollBounce 2s cubic-bezier(.4,.4,0,1) infinite}
+
+/* ヒーロー背景 */
+.hero-fixed-bg{will-change:transform;transition:transform 3000ms cubic-bezier(.4,.4,0,1) 500ms}
+
+/* ホバー */
+.header-nav a{transition:opacity 200ms cubic-bezier(.4,.4,0,1)}
+.header-nav a:hover{opacity:.5}
+.footer-nav a{transition:color 300ms cubic-bezier(.4,.4,0,1)}
+.footer-nav a:hover{color:rgba(255,255,255,.9)}
+.footer-cta-card{transition:opacity 300ms cubic-bezier(.4,.4,0,1),box-shadow 300ms cubic-bezier(.4,.4,0,1)}
+.footer-cta-card:hover{opacity:.88;box-shadow:0 12px 40px rgba(0,0,0,.15)}
+.news-card{transition:opacity 300ms cubic-bezier(.4,.4,0,1),transform 300ms cubic-bezier(.4,.4,0,1),box-shadow 300ms cubic-bezier(.4,.4,0,1)}
+.news-card:hover{opacity:.88;transform:translateY(-4px);box-shadow:rgba(0,0,0,.15) 0 8px 32px 0}
+.svc-btn,.hero-btn,.hero-cta,.careers-link{transition:opacity 300ms cubic-bezier(.4,.4,0,1)}
+.svc-btn:hover,.hero-btn:hover,.hero-cta:hover,.careers-link:hover{opacity:.7}
+.svc-img{will-change:transform;transition:transform 600ms cubic-bezier(.4,.4,0,1)}
+.svc-row:hover .svc-img,.svc-home-item:hover .svc-img{transform:scale(1.04)}
+.product-img{will-change:transform;transition:transform 600ms cubic-bezier(.4,.4,0,1)}
+.product-item:hover .product-img{transform:scale(1.04)}
+.val-card{transition:border-color 300ms cubic-bezier(.4,.4,0,1)}
+.val-card:hover{border-color:rgba(255,255,255,.3)}
+.staff-card{transition:transform 300ms cubic-bezier(.4,.4,0,1),box-shadow 300ms cubic-bezier(.4,.4,0,1)}
+.staff-card:hover{transform:translateY(-4px);box-shadow:rgba(0,0,0,.12) 0 8px 24px}
+.form-input,.form-textarea{transition:border-color 200ms cubic-bezier(.4,.4,0,1)}

@@ -1,7 +1,8 @@
 <?php
 $pageTitle = '製品・技術・設備案内｜日承工業株式会社　九州事業所';
 $pageDesc  = '射出成形・自動ロボット・高精度インジェクション加工など、日承工業の製品・技術・設備をご紹介します。';
-require_once __DIR__.'/../_inc/header.php';
+require_once __DIR__."/../_inc/header.php";
+?><!-- subpage --><script>document.body.classList.add("subpage");</script><?php
 ?>
 <style>
 .srv-intro{background:var(--cream);padding:80px 80px 48px}
@@ -53,8 +54,8 @@ require_once __DIR__.'/../_inc/header.php';
 <section class="page-hero">
   <div class="page-hero-bg" style="background-image:url('/images/service-facility.webp')"></div>
   <div class="page-hero-inner">
-    <h1 class="page-hero-en">SERVICE</h1>
-    <p class="page-hero-ja">わたしたちのサービス</p>
+    <h1 class="page-hero-en anim-down">SERVICE</h1>
+    <p class="page-hero-ja anim-fade d2">わたしたちのサービス</p>
   </div>
 </section>
 
@@ -64,10 +65,10 @@ require_once __DIR__.'/../_inc/header.php';
 </section>
 
 <section class="product-sec">
-  <p class="product-label">PRODUCT</p>
-  <h2 class="product-title">製品加工技術の一部紹介</h2>
+  <p class="product-label anim-fade">PRODUCT</p>
+  <h2 class="product-title anim d1">製品加工技術の一部紹介</h2>
 
-  <div class="product-item">
+  <div class="product-item anim">
     <div class="product-img" style="background-image:url('/images/service-processing.webp')"></div>
     <div class="product-info">
       <p class="product-num">01</p>
@@ -76,7 +77,7 @@ require_once __DIR__.'/../_inc/header.php';
     </div>
   </div>
 
-  <div class="product-item reverse">
+  <div class="product-item reverse anim d2">
     <div class="product-img" style="background-image:url('/images/service-facility.webp')"></div>
     <div class="product-info">
       <p class="product-num">02</p>
@@ -87,22 +88,22 @@ require_once __DIR__.'/../_inc/header.php';
 </section>
 
 <section class="tech-sec">
-  <p class="tech-label">TECHNOLOGY</p>
+  <p class="tech-label anim-fade">TECHNOLOGY</p>
   <h2 class="tech-title">工場でつくられる製品は</h2>
   <p class="tech-sub">厳しい管理のもと、各メーカー様に納品されます</p>
   <div class="tech-grid">
-    <div class="tech-card"><p class="tech-num">01</p><h3 class="tech-name">高品質</h3><p class="tech-body">機種や機能に最適の製品をつくるため、メーカー様との共同による技術開発も積極的に推進。厳しい管理のもと高品質な製品づくりを行っています。</p></div>
-    <div class="tech-card"><p class="tech-num">02</p><h3 class="tech-name">技術</h3><p class="tech-body">マシンオペレーターやワーカーによる、各種ロボット群による樹脂成形の加工技術にも高い評価をいただいております。</p></div>
-    <div class="tech-card"><p class="tech-num">03</p><h3 class="tech-name">検品</h3><p class="tech-body">出荷前の徹底した検品作業。不良品を出さないよう、日々の習慣として品質管理を行っています。</p></div>
+    <div class="tech-card anim"><p class="tech-num">01</p><h3 class="tech-name">高品質</h3><p class="tech-body">機種や機能に最適の製品をつくるため、メーカー様との共同による技術開発も積極的に推進。厳しい管理のもと高品質な製品づくりを行っています。</p></div>
+    <div class="tech-card anim"><p class="tech-num">02</p><h3 class="tech-name">技術</h3><p class="tech-body">マシンオペレーターやワーカーによる、各種ロボット群による樹脂成形の加工技術にも高い評価をいただいております。</p></div>
+    <div class="tech-card anim"><p class="tech-num">03</p><h3 class="tech-name">検品</h3><p class="tech-body">出荷前の徹底した検品作業。不良品を出さないよう、日々の習慣として品質管理を行っています。</p></div>
   </div>
 </section>
 
 <section class="facility-sec">
-  <p class="facility-label">FACILITY</p>
+  <p class="facility-label anim-fade">FACILITY</p>
   <h2 class="facility-title">各種樹脂成形ロボット群をはじめとする<br>先進の機器を積極的に導入</h2>
   <div class="facility-grid">
-    <div class="facility-card"><p class="facility-num">01</p><h3 class="facility-name">先進機器</h3><p class="facility-body">各種樹脂成形ロボット群をはじめとする先進の機器を積極的に導入し、製品の質の高さ、ローコスト、短納期を実現する生産体制を確立しています。品質管理面では、ロボットに製品チェック機能、工程間チェック機能を搭載。不良品や作業ロス時間を大幅に減少させました。</p></div>
-    <div class="facility-card"><p class="facility-num">02</p><h3 class="facility-name">高精度のインジェクション加工技術</h3><p class="facility-body">マシンメーカーとの共同仕様開発による10mm以上の厚肉成形技術を実現。各種樹脂成形ロボット群による高精度な加工技術で、お客様のニーズに対応した製品づくりを行っています。</p></div>
+    <div class="facility-card anim"><p class="facility-num">01</p><h3 class="facility-name">先進機器</h3><p class="facility-body">各種樹脂成形ロボット群をはじめとする先進の機器を積極的に導入し、製品の質の高さ、ローコスト、短納期を実現する生産体制を確立しています。品質管理面では、ロボットに製品チェック機能、工程間チェック機能を搭載。不良品や作業ロス時間を大幅に減少させました。</p></div>
+    <div class="facility-card anim"><p class="facility-num">02</p><h3 class="facility-name">高精度のインジェクション加工技術</h3><p class="facility-body">マシンメーカーとの共同仕様開発による10mm以上の厚肉成形技術を実現。各種樹脂成形ロボット群による高精度な加工技術で、お客様のニーズに対応した製品づくりを行っています。</p></div>
   </div>
 </section>
 

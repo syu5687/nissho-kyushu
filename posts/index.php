@@ -6,7 +6,8 @@ foreach($news as $n){ if($n['id']===$id){$item=$n;break;} }
 if(!$item){header('Location:/news');exit;}
 $pageTitle = htmlspecialchars($item['title']).' | NEWS | 日承工業株式会社 九州事業所';
 $pageDesc  = mb_strimwidth(strip_tags($item['content']),0,120,'...');
-require_once __DIR__.'/../_inc/header.php';
+require_once __DIR__."/../_inc/header.php";
+?><!-- subpage --><script>document.body.classList.add("subpage");</script><?php
 ?>
 <style>
 .post-body-section{background:var(--cream);padding:80px;min-height:60vh}
@@ -48,8 +49,8 @@ require_once __DIR__.'/../_inc/header.php';
 <section class="page-hero" style="min-height:360px">
   <div class="page-hero-bg" style="background-image:url('<?= htmlspecialchars($item['image'] ?: '/images/news-1.webp') ?>')"></div>
   <div class="page-hero-inner">
-    <h1 class="page-hero-en">NEWS</h1>
-    <p class="page-hero-ja">お知らせ</p>
+    <h1 class="page-hero-en anim-down">NEWS</h1>
+    <p class="page-hero-ja anim-fade d2">お知らせ</p>
   </div>
 </section>
 
@@ -58,8 +59,8 @@ require_once __DIR__.'/../_inc/header.php';
     <span><?= htmlspecialchars(str_replace('-','/',$item['date'])) ?></span>
     <span class="post-meta-cat"><?= htmlspecialchars($item['category']) ?></span>
   </div>
-  <h1 class="post-title"><?= htmlspecialchars($item['title']) ?></h1>
-  <div class="post-content">
+  <h1 class="post-title anim"><?= htmlspecialchars($item['title']) ?></h1>
+  <div class="post-content anim d1">
     <?= nl2br(htmlspecialchars($item['content'])) ?>
     <?php if(!empty($item['link'])): ?>
     <div class="post-link-box">

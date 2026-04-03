@@ -265,16 +265,16 @@ $recentNews = array_slice($news, 0, 2);
     <div class="wwd-img" style="background-image:url('/images/careers-bg.webp')"></div>
   </div>
   <div class="wwd-body">
-    <h2 class="wwd-heading">WHAT WE DO</h2>
-    <p class="wwd-text">日承工業グループでは車両、電子部品に関する、金属と樹脂を合わせ1,200点以上の製品を取り扱っています。工場毎でつくられた製品は 厳しい管理のもと各メーカー様に納品され、これらの製品を通じ皆様の安全で快適なカーライフをバックアップしています。<br><br>次々と進歩する自動車の歩みに先駆けて、それぞれの機種や機能に最適の 製品をつくるため、メーカー様との協同による技術開発も積極的に推進。ハイクオリティー・ローコストを追求した製品づくりにあらゆる角度から取り組んでいます。</p>
+    <h2 class="wwd-heading anim">WHAT WE DO</h2>
+    <p class="wwd-text anim d2">日承工業グループでは車両、電子部品に関する、金属と樹脂を合わせ1,200点以上の製品を取り扱っています。工場毎でつくられた製品は 厳しい管理のもと各メーカー様に納品され、これらの製品を通じ皆様の安全で快適なカーライフをバックアップしています。<br><br>次々と進歩する自動車の歩みに先駆けて、それぞれの機種や機能に最適の 製品をつくるため、メーカー様との協同による技術開発も積極的に推進。ハイクオリティー・ローコストを追求した製品づくりにあらゆる角度から取り組んでいます。</p>
   </div>
 </section>
 
 <!-- SERVICE -->
 <section class="svc-home">
-  <p class="svc-home-label">SERVICE</p>
+  <p class="svc-home-label anim">SERVICE</p>
 
-  <div class="svc-home-item">
+  <div class="svc-home-item anim">
     <div class="svc-img" style="background-image:url('/images/service-processing.webp')"></div>
     <div class="svc-info">
       <p class="svc-title">PROCESSING</p>
@@ -284,7 +284,7 @@ $recentNews = array_slice($news, 0, 2);
     </div>
   </div>
 
-  <div class="svc-home-item reverse">
+  <div class="svc-home-item reverse anim d2">
     <div class="svc-img" style="background-image:url('/images/service-facility.webp')"></div>
     <div class="svc-info">
       <p class="svc-title">FACILITY</p>
@@ -298,12 +298,12 @@ $recentNews = array_slice($news, 0, 2);
 <!-- NEWS -->
 <section class="news-home">
   <div class="news-home-head">
-    <h2 class="news-home-title">NEWS</h2>
+    <h2 class="news-home-title anim">NEWS</h2>
     <a href="/news" class="news-viewmore">VIEW MORE <i class="material-icons">chevron_right</i></a>
   </div>
   <div class="news-cards">
     <?php foreach($recentNews as $item): ?>
-    <a href="/posts?id=<?= urlencode($item['id']) ?>" class="news-card" style="text-decoration:none;color:inherit">
+    <a href="/posts?id=<?= urlencode($item['id']) ?>" class="news-card anim-left" style="text-decoration:none;color:inherit">
       <?php if(!empty($item['image'])): ?>
       <img class="news-card-img" src="<?= htmlspecialchars($item['image']) ?>" alt="" loading="lazy">
       <?php else: ?>
@@ -324,9 +324,9 @@ $recentNews = array_slice($news, 0, 2);
 <section class="careers">
   <div class="careers-bg" style="background-image:url('/images/careers-bg.webp')"></div>
   <div class="careers-inner">
-    <p class="careers-label">CAREERS</p>
-    <h2 class="careers-title">わたしたちは個のちからを最大限に活かしたチーム戦を実践しています。</h2>
-    <p class="careers-text">チームのビジョンに共感し、共に前進できる仲間を探しています。<br>未来の自分と、未来の暮らしをわたしたちと一緒につくりませんか？</p>
+    <p class="careers-label anim-fade">CAREERS</p>
+    <h2 class="careers-title anim d2">わたしたちは個のちからを最大限に活かしたチーム戦を実践しています。</h2>
+    <p class="careers-text anim d3">チームのビジョンに共感し、共に前進できる仲間を探しています。<br>未来の自分と、未来の暮らしをわたしたちと一緒につくりませんか？</p>
     <a href="https://www.recruit.nissho-kyushu.jp/" target="_blank" rel="noopener" class="careers-link">募集一覧をみる <i class="material-icons">chevron_right</i></a>
   </div>
 </section>

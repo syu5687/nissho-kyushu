@@ -1,7 +1,8 @@
 <?php
 $pageTitle = '日承工業株式会社　新着情報 | NEWS';
 $pageDesc  = '日承工業株式会社 九州事業所の新着情報・お知らせ一覧です。';
-require_once __DIR__ . '/../_inc/header.php';
+require_once __DIR__."/../_inc/header.php";
+?><!-- subpage --><script>document.body.classList.add("subpage");</script><?php
 $news = json_decode(file_get_contents(__DIR__ . '/../data/news.json'), true) ?: [];
 usort($news, fn($a,$b) => strcmp($b['date'],$a['date']));
 $filterCat = $_GET['cat'] ?? '';
@@ -52,13 +53,13 @@ if($filterCat) $news = array_values(array_filter($news, fn($n) => $n['category']
 <section class="page-hero">
   <div class="page-hero-bg" style="background-image:url('/images/news-1.webp')"></div>
   <div class="page-hero-inner">
-    <h1 class="page-hero-en">NEWS</h1>
-    <p class="page-hero-ja">お知らせ</p>
+    <h1 class="page-hero-en anim-down">NEWS</h1>
+    <p class="page-hero-ja anim-fade d2">お知らせ</p>
   </div>
 </section>
 
 <section class="news-list-body">
-  <h2 class="news-list-title">すべての記事一覧</h2>
+  <h2 class="news-list-title anim">すべての記事一覧</h2>
 
   <div class="cat-filters">
     <a href="/news"><button class="cat-btn <?= !$filterCat?'active':'' ?>">ALL</button></a>
