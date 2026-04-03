@@ -19,7 +19,7 @@ function registerAnims(){
   });
 }
 
-/* ===== ヒーロー背景ケンバーンズ（scale 1.06→1, 3000ms）===== */
+/* ===== ヒーロー背景ケンバーンズ ===== */
 function initHeroBg(){
   var bg = document.querySelector('.hero-fixed-bg');
   if(!bg) return;
@@ -31,7 +31,7 @@ function initHeroBg(){
   });
 }
 
-/* ===== ナビ遅延フェードイン（opacity 0→1, 800ms, delay 1400ms）===== */
+/* ===== ナビ遅延フェードイン（HOMEのみ）===== */
 function initNavFade(){
   var hdr = document.getElementById('site-header');
   if(!hdr) return;
@@ -48,11 +48,11 @@ function initNavFade(){
 /* ===== ヒーローコンテンツ順次アニメーション ===== */
 function initHeroContent(){
   var items = [
-    {sel:'.hero-label',       delay:600},
-    {sel:'.hero-title',       delay:800},
+    {sel:'.hero-label',        delay:600},
+    {sel:'.hero-title',        delay:800},
     {sel:'.hero-mission-label',delay:1200},
     {sel:'.hero-mission-text', delay:1400},
-    {sel:'.hero-btn',         delay:1600},
+    {sel:'.hero-btn',          delay:1600},
   ];
   items.forEach(function(item){
     var el = document.querySelector(item.sel);
@@ -79,25 +79,12 @@ function initNavScroll(){
   },{passive:true});
 }
 
-/* ===== ページ遷移フェード ===== */
-function initPageTransition(){
+/* ===== ページ読み込み時フェードイン（リンクには一切干渉しない）===== */
+function initPageFadeIn(){
   document.body.style.opacity = '0';
   requestAnimationFrame(function(){
     requestAnimationFrame(function(){
       document.body.style.opacity = '1';
-    });
-  });
-  document.querySelectorAll('a[href]').forEach(function(a){
-    var href = a.getAttribute('href') || '';
-    if(!href || href.charAt(0)==='#' || href.indexOf('http')===0 ||
-       href.indexOf('mailto')===0 || href.indexOf('admin')!==-1 ||
-       href.indexOf('tel')===0) return;
-    a.addEventListener('click',function(e){
-      if(a.href === window.location.href) return;
-      e.preventDefault();
-      var url = a.href;
-      document.body.style.opacity = '0';
-      setTimeout(function(){ window.location.href = url; }, 400);
     });
   });
 }
@@ -106,7 +93,7 @@ function initPageTransition(){
 function initHamburger(){
   var btn = document.getElementById('hamburger');
   var nav = document.getElementById('headerNav');
-  if(!btn||!nav) return;
+  if(!btn || !nav) return;
   btn.addEventListener('click',function(){
     nav.classList.toggle('open');
     var spans = btn.querySelectorAll('span');
@@ -124,14 +111,16 @@ function initHamburger(){
     a.addEventListener('click',function(){
       nav.classList.remove('open');
       var spans = btn.querySelectorAll('span');
-      spans[0].style.transform='';spans[1].style.opacity='';spans[2].style.transform='';
+      spans[0].style.transform='';
+      spans[1].style.opacity='';
+      spans[2].style.transform='';
     });
   });
 }
 
 /* ===== 初期化 ===== */
 document.addEventListener('DOMContentLoaded',function(){
-  initPageTransition();
+  initPageFadeIn();
   initNavScroll();
   initHamburger();
 
@@ -142,13 +131,12 @@ document.addEventListener('DOMContentLoaded',function(){
     initHeroContent();
   }
 
-  // スクロールアニメーション登録
   registerAnims();
 
-  // ページ上部に近い .anim は即座に表示
+  // ビューポート内の.animは即座に表示
   document.querySelectorAll('.anim,.anim-down,.anim-left,.anim-right,.anim-fade').forEach(function(el){
     var rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight * 0.9){
+    if(rect.top < window.innerHeight * 0.95){
       setTimeout(function(){ el.classList.add('in'); }, 100);
     }
   });
